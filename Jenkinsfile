@@ -16,10 +16,10 @@ pipeline {
         }
       }
     }
-    // stage('Create EC2 Instance') {
-    //   steps {
-    //     ansiblePlaybook playbook: 'main.yaml', inventory: 'inventory'
-    //   }
-    // }
+    stage('Create EC2 Instance') {
+      steps {
+        ansiblePlaybook playbook: 'main.yaml', inventory: 'inventory'
+      }
+    }
   }
 }
